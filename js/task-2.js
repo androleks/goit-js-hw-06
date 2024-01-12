@@ -7,6 +7,28 @@
 // removeItem(itemToRemove) — приймає рядок з назвою товару itemToRemove і видаляє його з масиву товарів у приватній властивості items об'єкта.
 // Візьми код нижче з ініціалізацією екземпляра й викликами методів і встав його після оголошення класу для перевірки коректності роботи.У консоль будуть виведені результати їх роботи.Будь ласка, нічого там не змінюй.
 
+class Storage {
+  constructor(arr) {
+    this.items = arr;
+  }
+
+  getItems() {
+    return this.items;
+  }
+
+  addItem(newItem) {
+    this.items.push(newItem);
+  }
+
+  removeItem(itemToRemove) {
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i] === itemToRemove) {
+        this.items.splice(i, 1);
+        break;
+      }
+    }
+  }
+}
 
 
 
